@@ -40,10 +40,10 @@ pipeline {
       steps {
         dir(path: "${BASE_PATH}") {
           sh """
-                              pm2 delete ${PM2_APP_NAME} || true
-                              pm2 start npm --name ${PM2_APP_NAME} -- run start -- --port ${PORT}
-                              pm2 save
-                              """
+                                        pm2 delete ${PM2_APP_NAME} || true
+                                        pm2 start npm --name ${PM2_APP_NAME} -- run start -- --port ${PORT}
+                                        pm2 save
+                                        """
         }
 
       }
